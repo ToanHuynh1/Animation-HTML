@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Continuous Text Animation</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .text {
+        display: flex;
+        font-size: 100px;
+        gap: 5px;
+      }
+
+      .letter {
+        opacity: 0;
+        animation: fadeInOut 5s infinite;
+        color: #5a5555;
+        text-shadow: 0 0 10px red;
+        border-radius: 5px;
+      }
+
+      @keyframes fadeInOut {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        25% {
+          opacity: 1;
+          transform: translateY(30px);
+        }
+        75% {
+          opacity: 1;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text">
+        <span class="letter" style="animation-delay: 0s">H</span>
+        <span class="letter" style="animation-delay: 0.5s">e</span>
+        <span class="letter" style="animation-delay: 1s">l</span>
+        <span class="letter" style="animation-delay: 1.5s">l</span>
+        <span class="letter" style="animation-delay: 2s">o</span>
+      </div>
+    </div>
+  </body>
+</html>
